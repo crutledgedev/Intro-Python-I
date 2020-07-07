@@ -22,7 +22,6 @@ def f2(*num):
     sum = 0
     for n in num:
         sum = sum + n
-    print(sum)
     return sum
 
 
