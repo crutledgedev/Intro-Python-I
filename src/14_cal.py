@@ -19,7 +19,7 @@ and does the following:
    Then exit the program.
 
 Note: the user should provide argument input (in the initial call to run the file) and not 
-prompted input. Also, the brackets around year are to denote that the argument is
+prompted input. Also, the brackets around year are to denote that th pe argument is
 optional, as this is a common convention in documentation.
 
 This would mean that from the command line you would call `python3 14_cal.py 4 2015` to 
@@ -31,5 +31,21 @@ import sys
 import calendar
 from datetime import datetime
 
+
+today = datetime.today()
+
+# if no input, print calendar for current month -- look at datetime module
+if len(sys.argv) == 1:
+    print(calendar.month(today.year, today.month))
+# if one arg, [month] of current year
+if len(sys.argv) == 2:
+    print(calendar.month(today.year, int(sys.argv[1])))
+# if two args, [month] [year]
+if len(sys.argv) == 3:
+    print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
+
+# print(calendar.month(yy, mm))
 # user_input = sys.argv
 # print(user_input[])
+# print("The calender of year 2020 is : ")
+# print(calendar.calendar(2020))

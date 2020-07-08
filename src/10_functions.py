@@ -27,6 +27,6 @@ def says_even(num):
         print("Odd")
 
 
-print(is_even(num))
+is_even(num)
 
-# print(says_even(num))
+says_even(num)
